@@ -1,0 +1,24 @@
+/* Changing default styles of the browser */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #80ed99;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  color: #fffffc;
+  padding: 25px 60px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
