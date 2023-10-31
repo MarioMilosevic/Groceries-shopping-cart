@@ -1,0 +1,42 @@
+Grocery Shopping Cart
+Welcome to the Grocery Shopping Cart project! This JavaScript-based web application allows users to create a virtual shopping cart, add items, specify quantities, and calculate the total cost.
+
+Table of Contents
+Features
+Demo
+Installation
+Usage
+Contributing
+License
+Features
+Add Items: Easily add grocery items to your shopping cart.
+Quantity Selection: Specify the quantity of each item you want to purchase.
+Total Calculation: Automatically calculates the total cost of your shopping cart.
+Responsive Design: The application is designed to work seamlessly on desktop and mobile devices.
+Demo
+[Insert Link to Live Demo]
+
+Screenshot
+
+Installation
+To run this project locally, follow these steps:
+
+Clone the repository: git clone https://github.com/your-username/grocery-shopping-cart.git
+Navigate to the project directory: cd grocery-shopping-cart
+Open index.html in your web browser.
+Usage
+Open the application in your web browser.
+Click on the "Add Item" button to add grocery items to your cart.
+Specify the quantity for each item.
+Your total cost will be automatically calculated and displayed.
+Proceed to checkout or continue shopping.
+Contributing
+Contributions are welcome! Here's how you can contribute to this project:
+
+Fork the repository.
+Create a new branch: git checkout -b feature-new-feature
+Make changes and commit: git commit -m 'Add new feature'
+Push to the branch: git push origin feature-new-feature
+Submit a pull request.
+License
+This project is licensed under the MIT License.
