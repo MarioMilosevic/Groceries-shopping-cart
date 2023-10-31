@@ -1,20 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Groceries Store</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-</head>
-<body>
-  <div class="navbar">
-    <h2>Groceries Store</h2>
-    <div class="cart">
-      <i class="bi bi-cart4"></i>
-      <div class="cartAmount">0</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Groceries Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <h2>Groceries Store</h2>
+      <div class="cart">
+        <i class="bi bi-cart4"></i>
+        <div class="cartAmount">0</div>
+      </div>
     </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <!-- Main -->
+    <div id="shop" class="shop">
+      <div class="row">
+        <div class="item">
+          <img src="images/img-1.jpg" alt="Vegetables" />
+          <div class="details">
+            <h3>Vegetables</h3>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/img-2.jpg" alt="Fruits" />
+          <div class="details">
+            <h3>Fruits</h3>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/img-3.jpg" alt="Meat" />
+          <div class="details">
+            <h3>Meat</h3>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="row">
+        <div class="item">
+          <img src="images/img-4.jpg" alt="Milk & eggs" />
+          <div class="details">
+            <h3>Milk & eggs</h3>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/img-5.jpg" alt="Fish" />
+          <div class="details">
+            <h3>Fish</h3>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/img-6.webp" alt="Drinks" />
+          <div class="details">
+            <h3>Drinks</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

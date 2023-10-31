@@ -37,3 +37,24 @@ body {
     padding: 3px;
     border-radius: 3px;
 }
+
+/* Shop */
+
+.shop {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.item{
+    margin: 100px auto;
+    justify-content: center;
+    align-items: center;
+}
+.item img {
+    width: 250px;
+    border-radius: 30px;
+}
