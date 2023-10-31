@@ -7,13 +7,14 @@
 
 body {
   font-family: sans-serif;
+  background-color: #80ed99;
+
 }
 /* Navbar  */
 
 .navbar {
     display: flex;
     justify-content: space-between;
-  background-color: #80ed99;
   color: #fffffc;
   padding: 25px 60px;
 }
@@ -56,5 +57,6 @@ body {
 }
 .item img {
     width: 250px;
+    height: 200px;
     border-radius: 30px;
 }
