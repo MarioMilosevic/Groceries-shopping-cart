@@ -17,8 +17,33 @@ body {
   color: #fffffc;
   padding: 25px 60px;
 }
+.navbar h2 {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
 
 .navbar a {
   text-decoration: none;
   color: black;
+}
+
+.cart {
+  position: relative;
+  background-color: white;
+  color: #80ed99;
+  padding: 5px;
+  font-size: 32px;
+  border-radius: 4px;
+}
+
+.cartAmount {
+  position: absolute;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  right: -10px;
+  top: -15px;
+  padding: 3px;
+  border-radius: 3px;
 }

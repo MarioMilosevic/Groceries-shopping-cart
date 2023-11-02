@@ -23,6 +23,14 @@ body {
     text-decoration: none;
     color: black;
 }
+
+.navbar h2 {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
 .cart {
     position: relative;
     background-color: white;
