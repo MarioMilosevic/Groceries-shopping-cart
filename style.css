@@ -85,3 +85,11 @@ body {
 .item i {
     cursor: pointer;
 }
+
+/* Confirmation Page */
+.confirmationPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
