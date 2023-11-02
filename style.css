@@ -81,3 +81,7 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
+
+.item i {
+    cursor: pointer;
+}
