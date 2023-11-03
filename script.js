@@ -6,9 +6,8 @@ const milkEggs = document.querySelector("#milkEggs");
 const fish = document.querySelector("#fish");
 const drinks = document.querySelector("#drinks");
 const navbar = document.querySelector("#navbar");
-const row = document.querySelector(".row");
 
-let totalAmount = 0;
+const cartButton = document.querySelector("#cartIcon");
 
 // Vegetables
 const tomato = 2.13;
@@ -19,17 +18,11 @@ const cabbage = 1.28;
 const garlic = 0.85;
 
 // Functions
-
+cartButton.addEventListener("click", function () {
+  console.log("radi");
+});
 vegetables.addEventListener("click", function () {
-  let newHtml = `<div class="navbar">
-  <a href="../../index.html">
-    <h2>Groceries Store</h2>
-  </a>
-  <div class="cart">
-    <i class="bi bi-cart4"></i>
-    <div class="cartAmount">0</div>
-  </div>
-</div>
+  let newHtml = `
 <div id="shop" class="shop">
   <div class="row">
     <div class="item">
@@ -91,11 +84,10 @@ vegetables.addEventListener("click", function () {
   milkEggs.style.display = "none";
   fish.style.display = "none";
   drinks.style.display = "none";
-  navbar.style.display = "none";
-  document.body.innerHTML = newHtml;
+  shop.innerHTML = newHtml;
   const increment = document.querySelectorAll(".bi-plus-circle");
   const decrement = document.querySelectorAll(".bi-dash-circle");
-  let cartAmount = 0
+  let cartAmount = 0;
   let cartAmountElement = document.querySelector(".cartAmount");
 
   decrement.forEach((button) => {
@@ -103,14 +95,12 @@ vegetables.addEventListener("click", function () {
       cartAmount--;
       cartAmount = Math.max(cartAmount, 0);
       cartAmountElement.textContent = cartAmount;
-      console.log("minus");
     });
   });
   increment.forEach((button) => {
     button.addEventListener("click", function () {
       cartAmount++;
       cartAmountElement.textContent = cartAmount;
-      console.log("plus");
     });
   });
 });
