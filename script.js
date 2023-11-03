@@ -6,8 +6,18 @@ const milkEggs = document.querySelector("#milkEggs");
 const fish = document.querySelector("#fish");
 const drinks = document.querySelector("#drinks");
 const navbar = document.querySelector("#navbar");
-
+const groceries = document.querySelector("#groceries");
+const groceriesDiv = [vegetables, fruits, meat, milkEggs, fish, drinks];
+let newHtml;
 const cartButton = document.querySelector("#cartIcon");
+
+let tomatoDiv = document.querySelector("#tomatoDiv");
+let carrotDiv = document.querySelector("#carrotDiv");
+let onionDiv = document.querySelector("#onionDiv");
+let cucumberDiv = document.querySelector("#cucumberDiv");
+let cabbageDiv = document.querySelector("#cabbageDiv");
+let garlicDiv = document.querySelector("#garlicDivDiv");
+const vegetablesDiv = [];
 
 // Vegetables
 const tomato = 2.13;
@@ -21,11 +31,73 @@ const garlic = 0.85;
 cartButton.addEventListener("click", function () {
   console.log("radi");
 });
-vegetables.addEventListener("click", function () {
-  let newHtml = `
-<div id="shop" class="shop">
+
+groceries.addEventListener("click", function () {
+  newHtml = `
+  
+    <div class="row">
+        <div id="vegetables" class="item">
+      <img
+        src="categories/main/images/img-1.jpg"
+        alt="Vegetables"
+      />
+      <div class="details">
+        <h3>Vegetables</h3>
+      </div>
+    </div>
+    <div id="fruits" class="item">
+      <img src="categories/main/images/img-2.jpg" alt="Fruits" />
+      <div class="details">
+        <h3>Fruits</h3>
+      </div>
+    </div>
+    <div id="meat" class="item">
+      <img src="categories/main/images/img-3.jpg" alt="Meat" />
+      <div class="details">
+        <h3>Meat</h3>
+      </div>
+    </div>
+  </div>
+
+  <!--  -->
   <div class="row">
-    <div class="item">
+    <div id="milkEggs" class="item">
+      <img src="categories/main/images/img-4.jpg" alt="Milk & eggs" />
+      <div class="details">
+        <h3>Milk & eggs</h3>
+      </div>
+    </div>
+    <div id="fish" class="item">
+      <img src="categories/main/images/img-5.jpg" alt="Fish" />
+      <div class="details">
+        <h3>Fish</h3>
+      </div>
+    </div>
+    <div id="drinks" class="item">
+      <img src="categories/main/images/img-6.webp" alt="Drinks" />
+      <div class="details">
+        <h3>Drinks</h3>
+      </div>
+    </div>
+  </div>
+`;
+  vegetablesDiv.forEach((vegetable) => {
+    console.dir(vegetable);
+    vegetable.style.display = "none";
+  });
+  groceriesDiv.forEach((grocery) => {
+    console.dir(grocery);
+    grocery.style.display = "block";
+  });
+  shop.innerHTML = "";
+  shop.innerHTML = newHtml;
+});
+
+vegetables.addEventListener("click", function () {
+  newHtml = `
+ 
+  <div class="row">
+    <div id="tomatoDiv" class="item">
       <img src="categories/vegetables/images/img-1.webp" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
@@ -33,7 +105,7 @@ vegetables.addEventListener("click", function () {
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
-    <div class="item">
+    <div id="carrotDiv" class="item">
       <img src="categories/vegetables/images/img-2.jpg" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
@@ -41,7 +113,7 @@ vegetables.addEventListener("click", function () {
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
-    <div class="item">
+    <div id="onionDiv" class="item">
       <img src="categories/vegetables/images/img-3.jpg" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
@@ -50,8 +122,8 @@ vegetables.addEventListener("click", function () {
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="item">
+  < class="row">
+    <div id="cucumberDiv" class="item">
       <img src="categories/vegetables/images/img-4.jpg" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
@@ -59,7 +131,7 @@ vegetables.addEventListener("click", function () {
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
-    <div class="item">
+    <div id="cabbageDiv" class="item">
       <img src="categories/vegetables/images/img-5.jpg" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
@@ -67,7 +139,7 @@ vegetables.addEventListener("click", function () {
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
-    <div class="item">
+    <div id="garlicDiv" class="item">
       <img src="categories/vegetables/images/img-6.jpg" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
@@ -75,8 +147,8 @@ vegetables.addEventListener("click", function () {
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
-  </div>
-</div>
+  
+</>
 `;
 
   fruits.style.display = "none";
@@ -85,11 +157,25 @@ vegetables.addEventListener("click", function () {
   fish.style.display = "none";
   drinks.style.display = "none";
   shop.innerHTML = newHtml;
+  let tomatoDiv = document.querySelector("#tomatoDiv");
+  let carrotDiv = document.querySelector("#carrotDiv");
+  let onionDiv = document.querySelector("#onionDiv");
+  let cucumberDiv = document.querySelector("#cucumberDiv");
+  let cabbageDiv = document.querySelector("#cabbageDiv");
+  let garlicDiv = document.querySelector("#garlicDiv");
+  vegetablesDiv.push(
+    tomatoDiv,
+    carrotDiv,
+    onionDiv,
+    garlicDiv,
+    cabbageDiv,
+    cucumberDiv
+  );
   const increment = document.querySelectorAll(".bi-plus-circle");
   const decrement = document.querySelectorAll(".bi-dash-circle");
   let cartAmount = 0;
   let cartAmountElement = document.querySelector(".cartAmount");
-
+  console.log(vegetablesDiv);
   decrement.forEach((button) => {
     button.addEventListener("click", function () {
       cartAmount--;
