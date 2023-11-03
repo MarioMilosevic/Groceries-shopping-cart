@@ -33,9 +33,7 @@ cartButton.addEventListener("click", function () {
 });
 
 groceries.addEventListener("click", function () {
-  newHtml = `
-  
-    <div class="row">
+  newHtml = `<div class="row">
         <div id="vegetables" class="item">
       <img
         src="categories/main/images/img-1.jpg"
@@ -95,7 +93,6 @@ groceries.addEventListener("click", function () {
 
 vegetables.addEventListener("click", function () {
   newHtml = `
- 
   <div class="row">
     <div id="tomatoDiv" class="item">
       <img src="categories/vegetables/images/img-1.webp" alt="Vegetables" />
@@ -122,7 +119,7 @@ vegetables.addEventListener("click", function () {
       </div>
     </div>
   </div>
-  < class="row">
+  <div class="row">
     <div id="cucumberDiv" class="item">
       <img src="categories/vegetables/images/img-4.jpg" alt="Vegetables" />
       <div class="details">
@@ -147,8 +144,7 @@ vegetables.addEventListener("click", function () {
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
-  
-</>
+  </div>
 `;
 
   fruits.style.display = "none";
@@ -157,12 +153,12 @@ vegetables.addEventListener("click", function () {
   fish.style.display = "none";
   drinks.style.display = "none";
   shop.innerHTML = newHtml;
-  let tomatoDiv = document.querySelector("#tomatoDiv");
-  let carrotDiv = document.querySelector("#carrotDiv");
-  let onionDiv = document.querySelector("#onionDiv");
-  let cucumberDiv = document.querySelector("#cucumberDiv");
-  let cabbageDiv = document.querySelector("#cabbageDiv");
-  let garlicDiv = document.querySelector("#garlicDiv");
+  tomatoDiv = document.querySelector("#tomatoDiv");
+  carrotDiv = document.querySelector("#carrotDiv");
+  onionDiv = document.querySelector("#onionDiv");
+  cucumberDiv = document.querySelector("#cucumberDiv");
+  cabbageDiv = document.querySelector("#cabbageDiv");
+  garlicDiv = document.querySelector("#garlicDiv");
   vegetablesDiv.push(
     tomatoDiv,
     carrotDiv,
