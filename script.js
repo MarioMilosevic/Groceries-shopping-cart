@@ -1,3 +1,4 @@
+// Variables
 const vegetables = document.querySelector("#vegetables");
 const fruits = document.querySelector("#fruits");
 const meat = document.querySelector("#meat");
@@ -5,7 +6,19 @@ const milkEggs = document.querySelector("#milkEggs");
 const fish = document.querySelector("#fish");
 const drinks = document.querySelector("#drinks");
 const navbar = document.querySelector("#navbar");
-const row = document.querySelector('.row')
+const row = document.querySelector(".row");
+
+let totalAmount = 0;
+
+// Vegetables
+const tomato = 2.13;
+const carrot = 0.7;
+const onion = 3.41;
+const cucumber = 2.3;
+const cabbage = 1.28;
+const garlic = 0.85;
+
+// Functions
 
 vegetables.addEventListener("click", function () {
   let newHtml = `<div class="navbar">
@@ -23,7 +36,7 @@ vegetables.addEventListener("click", function () {
       <img src="categories/vegetables/images/img-1.webp" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
-        <h3>Tomato</h3>
+        <h4>Tomato 2.13$</h4>
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
@@ -31,7 +44,7 @@ vegetables.addEventListener("click", function () {
       <img src="categories/vegetables/images/img-2.jpg" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
-        <h3>Carrot</h3>
+        <h4>Carrot 0.70$</h4>
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
@@ -39,7 +52,7 @@ vegetables.addEventListener("click", function () {
       <img src="categories/vegetables/images/img-3.jpg" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
-        <h3>Onion</h3>
+        <h4>Onion 3.41$</h4>
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
@@ -49,7 +62,7 @@ vegetables.addEventListener("click", function () {
       <img src="categories/vegetables/images/img-4.jpg" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
-        <h3>Cucumber</h3>
+        <h4>Cucumber 2.30$</h4>
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
@@ -57,7 +70,7 @@ vegetables.addEventListener("click", function () {
       <img src="categories/vegetables/images/img-5.jpg" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
-        <h3>Cabbage</h3>
+        <h4>Cabbage 1.28$</h4>
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
@@ -65,20 +78,39 @@ vegetables.addEventListener("click", function () {
       <img src="categories/vegetables/images/img-6.jpg" alt="Vegetables" />
       <div class="details">
         <i class="bi bi-dash-circle"></i>
-        <h3>Garlic</h3>
+        <h4>Garlic 0.85$</h4>
         <i class="bi bi-plus-circle"></i>
       </div>
     </div>
   </div>
 </div>
 `;
-   fruits.style.display = "none";
-   meat.style.display = "none";
-   milkEggs.style.display = "none";
-   fish.style.display = "none";
-   drinks.style.display = "none";
-   navbar.style.display = "none";
-   document.body.innerHTML = newHtml;
+
+  fruits.style.display = "none";
+  meat.style.display = "none";
+  milkEggs.style.display = "none";
+  fish.style.display = "none";
+  drinks.style.display = "none";
+  navbar.style.display = "none";
+  document.body.innerHTML = newHtml;
+  const increment = document.querySelectorAll(".bi-plus-circle");
+  const decrement = document.querySelectorAll(".bi-dash-circle");
+  let cartAmount = 0
+  let cartAmountElement = document.querySelector(".cartAmount");
+
+  decrement.forEach((button) => {
+    button.addEventListener("click", function () {
+      cartAmount--;
+      cartAmount = Math.max(cartAmount, 0);
+      cartAmountElement.textContent = cartAmount;
+      console.log("minus");
+    });
+  });
+  increment.forEach((button) => {
+    button.addEventListener("click", function () {
+      cartAmount++;
+      cartAmountElement.textContent = cartAmount;
+      console.log("plus");
+    });
+  });
 });
-
-
